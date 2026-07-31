@@ -9,8 +9,8 @@ Rotary encoder controls system volume
 Firmware built on QMK, running on a Seeed Studio XIAO RP2040.
 Firmware is custom made persoanlly built. 
 ----------------------------
-##Schematic
-The KiCad schematic shows the XIAO RP2040 connected directly to five push buttons and a rotary encoder using GPIO pins, plus an I2C-connected OLED display.
+**Schematic
+**The KiCad schematic shows the XIAO RP2040 connected directly to five push buttons and a rotary encoder using GPIO pins, plus an I2C-connected OLED display.
 I made this all myself for the first time ever,
 My very own first schema 
 
