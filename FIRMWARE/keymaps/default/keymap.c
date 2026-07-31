@@ -1,26 +1,24 @@
-// Copyright 2022 Makoto Kurauchi (@MakotoKurauchi)
-// SPDX-License-Identifier: GPL-2.0-or-later
 
+Keymap · C
 #include QMK_KEYBOARD_H
-#include "rgblite.h"
-
+ 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT_ortho_1x1(
-    UG_HUEU
-  )
+    [0] = LAYOUT(
+        LCTL(KC_C),            LCTL(KC_V),            LCTL(KC_X),
+        LCTL(KC_Z),            LCTL(KC_S),            LCTL(LSFT(KC_Z))  // encoder push = Redo
+    ),
 };
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  if (record->event.pressed) {
-    switch (keycode) {
-      case QK_UNDERGLOW_HUE_UP:
-        rgblite_increase_hue();
-        break;
-    }
-  }
-  return true;
+ 
+#ifdef ENCODER_MAP_ENABLE
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+    [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+};
+#endif
+ 
+#ifdef OLED_ENABLE
+bool oled_task_user(void) {
+    oled_write_P(PSTR("ORPHEUS PAD\n"), false);
+    return false;
 }
-
-void keyboard_post_init_user(void) {
-  rgblite_init();
-  rgblite_increase_hue();
-}
+#endif
+ 
