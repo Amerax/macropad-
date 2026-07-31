@@ -1,1 +1,1 @@
-# macropad-
+# EZmacropad
