@@ -2,13 +2,14 @@
 
 A compact productivity macropad built around the Seeed Studio XIAO RP2040. The project includes a custom PCB designed in KiCad and QMK firmware, with 6 keys and a rotary encoder for everyday shortcuts like copy, paste, plus volume control and an OLED status display.
 
-Features:
+**Features:**
 5 push-button keys + 1 rotary encoder with integrated push switch (6 keys total), wired direct-pin (no matrix). Not having matrix makes it much simpler and easy. 
 Rotary encoder controls system volume 
 0.91" I2C OLED display (SSD1306-compatible) for status.
 Firmware built on QMK, running on a Seeed Studio XIAO RP2040.
 Firmware is custom made persoanlly built. 
-----------------------------
+
+---
 **Schematic**
 The KiCad schematic shows the XIAO RP2040 connected directly to five push buttons and a rotary encoder using GPIO pins, plus an I2C-connected OLED display.
 I made this all myself for the first time ever,
