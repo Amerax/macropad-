@@ -4,8 +4,7 @@ Built for: Seeed **XIAO RP2040** (swapped in for the SAMD21 on your board — sa
 footprint/pinout labels, so no rewiring needed) + ER-OLED 0.91" (SSD1306-compatible,
 I2C) + 5 push buttons + 1 rotary encoder w/ integrated push switch.
 
-## Pin mapping (confirmed from your schematic netlist)
-
+## Pin mapping 
 Direct-pin design — each switch/encoder line goes to its own GPIO, common ground.
 No matrix. Converted from XIAO D-labels to RP2040 GPIO names:
 
